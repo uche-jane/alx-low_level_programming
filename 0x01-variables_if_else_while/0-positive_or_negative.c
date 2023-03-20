@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
-/* test is a random mumber is postive, negative or zero */
+/* test a random mumber is postive, negative or zero */
 
 /* betty style doc for function main goes there */
 int main(void)
@@ -18,6 +17,7 @@ int main(void)
 	{
 		printf("%d is zero\n", n);
 	}
+
 	else
 	{
 		printf("%d is negative\n", n);
