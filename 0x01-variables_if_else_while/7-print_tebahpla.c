@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int main(void)
 {
     char c = 'z';
@@ -11,3 +13,4 @@ int main(void)
     putchar('\n');
     return 0;
 }
+
