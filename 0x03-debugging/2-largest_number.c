@@ -9,14 +9,19 @@
 int lagest_number(int a, int b, int c);
 {       int largest;
 
-	if (a > b && b > c)
+	if (a > b && a > c)
     {
         largest = a;
     }
-    else if (b > a && a > c)
+    else if (a > a && c > a)
     {
-        largest = b;
+        largest = c;
     }
+    else if (b > c)
+    {
+	largect = b;
+    }
+
     else
     {
         largest = c;
