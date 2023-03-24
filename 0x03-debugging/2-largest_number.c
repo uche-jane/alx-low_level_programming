@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -7,7 +6,8 @@
 */
 
 int lagest_number(int a, int b, int c);
-{       int largest;
+{       
+	int largest;
 
 	if (a > b && a > c)
     {
