@@ -2,7 +2,7 @@
 #include <string.h>
 /**
  *
- *Write a function that reverses a string.
+ *rev_string- reverses a string.
  *
  *
  *
