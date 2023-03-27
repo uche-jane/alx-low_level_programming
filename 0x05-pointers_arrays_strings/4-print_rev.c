@@ -8,15 +8,16 @@
  *
  */
 
-void print_rev(char *s) {
-    char len = 0;
-    while (*s != '\0') {
-        len++;
-        s++;
-    }
-    char n;
-    for ( n = len; n > 0; n--) {
-        putchar(s[n-1]);
-    }
-    putchar('\n');
+void print_rev(char *s)
+{
+	int len = 0;
+	int i;
+
+	while (*(s + len) != '\0')
+		len++;
+
+	for (i = len - 1; i >= 0; i--)
+		_putchar(*s);
+
+	_putchar('\n');
 }
