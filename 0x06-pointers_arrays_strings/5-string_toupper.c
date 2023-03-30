@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
-
+/**
+ * @char* str
+ *string_toupper - changes all lowercase letters of a string to uppercase.
+ * Return: Always 0.
+ */
 char* string_toupper(char* str) 
 {
     int i = 0;
