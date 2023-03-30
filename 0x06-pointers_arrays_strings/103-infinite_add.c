@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 
+/**
+ * *infinite_add - adds two numbers that are represented as strings in the character arrays "n1" and "n2"
+ * @char *n1
+ * @char *n2
+ *
+ * Return: Always 0.
+ */
+
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
     int len1 = strlen(n1);
@@ -13,16 +21,19 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
         return 0;
     
     /* Add digits from right to left*/
-    for (i = len1 - 1, j = len2 - 1; i >= 0 || j >= 0; i--, j--) {
-        sum = carry;
+    for (i = len1 - 1, j = len2 - 1; i >= 0 || j >= 0; i--, j--) 
+    {
+	sum = carry;
         if (i >= 0)
             sum += n1[i] - '0';
         if (j >= 0)
             sum += n2[j] - '0';
-        if (sum > 9) {
+        if (sum > 9) 
+	{
             carry = 1;
             sum -= 10;
-        } else {
+        } else 
+	{
             carry = 0;
         }
         r[len1 + len2 - i - j - 2] = sum + '0';
@@ -36,7 +47,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
     }
     
     /* Reverse result string*/
-    for (i = 0, j = len1 + len2 - 2; i < j; i++, j--) {
+    for (i = 0, j = len1 + len2 - 2; i < j; i++, j--) 
+    {
         char tmp = r[i];
         r[i] = r[j];
         r[j] = tmp;
@@ -45,19 +57,4 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
     return r;
 }
 
-int main(void)
-{
-    char n1[] = "123456789";
-    char n2[] = "987654321";
-    char r[20];
-    
-    char *result = infinite_add(n1, n2, r, sizeof(r));
-    
-    if (result)
-        printf("%s + %s = %s\n", n1, n2, result);
-    else
-        printf("Result cannot be stored in r\n");
-    
-    return 0;
-}
 
