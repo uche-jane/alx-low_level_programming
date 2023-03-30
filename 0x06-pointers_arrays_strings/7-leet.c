@@ -2,37 +2,26 @@
 #include <stdlib.h>
 #include <string.h>
 
-char* leet(char* str) {
-    /* Allocate memory for the encoded string*/
-    char* encoded_str = (char*)malloc(strlen(str) + 1);
-    if (encoded_str == NULL) {
-        perror("Error: ");
-        exit(EXIT_FAILURE);
+char *leet(char *str) {
+  int i, j;
+  char *result = malloc(strlen(str) + 1);
+  
+  for (i = 0, j = 0; str[i] != '\0'; i++, j++) {
+    if (str[i] == 'a' || str[i] == 'A') {
+      result[j] = '4';
+    } else if (str[i] == 'e' || str[i] == 'E') {
+      result[j] = '3';
+    } else if (str[i] == 'o' || str[i] == 'O') {
+      result[j] = '0';
+    } else if (str[i] == 't' || str[i] == 'T') {
+      result[j] = '7';
+    } else if (str[i] == 'l' || str[i] == 'L') {
+      result[j] = '1';
+    } else {
+      result[j] = str[i];
     }
-    
-    /* Define the mapping of characters to their 1337 equivalents*/
-    const char* mapping = "AAA4EEE3OOO0TTT7LLL1";
-    
-    /* Iterate through each character in the string*/
-    for (int i = 0; i < strlen(str); i++) {
-        char c = str[i];
-        /* Use the mapping to encode the character if it is a, e, o, t, or l*/
-        if (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'o' || c == 'O' || c == 't' || c == 'T' || c == 'l' || c == 'L') {
-            for (int j = 0; j < strlen(mapping); j += 2) {
-                if (mapping[j] == c) {
-                    encoded_str[i] = mapping[j+1];
-                    break;
-                }
-            }
-        } else {
-            /* Pass through any other characters unchanged*/
-            encoded_str[i] = c;
-        }
-    }
-    
-    /* Add null terminator to the end of the encoded string*/
-    encoded_str[strlen(str)] = '\0';
-    
-    return encoded_str;
+  }
+  
+  result[j] = '\0';
+  return result;
 }
-
