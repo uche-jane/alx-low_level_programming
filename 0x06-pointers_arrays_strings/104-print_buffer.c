@@ -2,7 +2,9 @@
 #include <ctype.h>
 
 /**
- * _buffer -
+ * print_buffer prints the content in the character array up to the specified size
+ * @char *b
+ * 
  *
  * Return: Always 0.
  */
