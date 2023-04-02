@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 
 /**
 * main - entry block
@@ -9,26 +8,20 @@
 
 int main(void)
 {
-    long int n = 612852475143;
-    long int i;
+	long i, number = 612852475143;
 
-    for (i = 2; i <= sqrt(n); i++)
-    {
-        while (n % i == 0)
-        {
-            n /= i;
-        }
-    }
+	for (i  = 2; i <= number; i++)
+	{
+		if (number % i == 0)
+		{
+			number = number / i;
+			i--;
+		}
+	}
 
-    if (n > 1)
-    {
-        printf("%ld\n", n);
-    }
-    else
-    {
-        printf("%ld\n", i - 1);
-    }
+	printf("%lu\n", i);
 
-    return 0;
+	return (0);
 }
-
+Footer
+© 2023 GitHub, Inc.
