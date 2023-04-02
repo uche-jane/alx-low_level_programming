@@ -2,23 +2,31 @@
 #include <stdlib.h>
 #include <string.h>
 
-char *rot13(char *str) {
-  int i;
-  char *result = malloc(strlen(str) + 1);
-  
-  for (i = 0; str[i] != '\0'; i++) {
-    if (str[i] >= 'A' && str[i] <= 'Z') {
-      result[i] = ((str[i] - 'A' + 13) % 26) + 'A';
-    } else if (str[i] >= 'a' && str[i] <= 'z') {
-      result[i] = ((str[i] - 'a' + 13) % 26) + 'a';
-    } else {
-      result[i] = str[i];
-    }
-  }
-  
-  result[i] = '\0';
-  return result;
+/**
+ * rot13 - encodes a string in rot13
+ * @s: string to be encoded
+ *
+ * Return: the resulting string
+ */
+char *rot13(char *s)
+{
+	int i, j;
+
+	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (j = 0; a[j] != '\0'; j++)
+		{
+			if (s[i] == a[j])
+			{
+				s[i] = b[j];
+				break;
+			}
+		}
+	}
+
+	return (s);
 }
-
-
 
