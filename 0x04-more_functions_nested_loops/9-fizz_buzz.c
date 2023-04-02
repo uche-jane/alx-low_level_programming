@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - entry point, prints numbers 1-100, replaces multiples of 3 and/or 5 with Fizz/Buzz/FizzBuzz
- *
- * Return: 0
- */
+* main - entry block
+* @void: no argument
+* Return: 0 Success
+*/
+
 int main(void)
 {
     int i;
