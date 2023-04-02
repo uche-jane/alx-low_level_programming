@@ -1,12 +1,20 @@
 #include <stdio.h>
 
+/**
+ * main - Entry point
+ * Description: the program's description
+ * parameter: describe the parameter
+ * Return: Always 0 (Success)
+ */
+
 int main(void)
 {
-    char d;
-    for (d = '0'; d <= '9'; d++) {
-        putchar(d);
-    }
-    putchar('\n');
+	int i;
 
-    return (0);
-} 
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d", i);
+	}
+	printf("\n");
+	return (0);
+}
