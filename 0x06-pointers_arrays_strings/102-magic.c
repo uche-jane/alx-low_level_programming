@@ -6,7 +6,7 @@
  * Return: Always 0.
  */
 
-#include <stdio.h>
+
 
 int main(void) {
     int a[] = {99, 98, 97};
