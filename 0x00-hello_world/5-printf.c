@@ -1,18 +1,14 @@
 #include <stdio.h>
+
 /**
- * main -Entry point
- *
- * Return : Always 0 (success)
+ * main - Entry point
+ * Description: the program's description
+ * parameter: describe the parameter
+ * Return: Always 0 (Success)
  */
-int main(void) 
+
+int main(void)
 {
-printf("On a canvas of black, splattered with hues of red,\n"
-       "A masterpiece emerges, a sight to behold!\n"
-       "Each stroke, a story told,\n"
-       "Every color, a feeling said.\n"
-       "As the painting dries, it comes to life,\n"
-       "A creation unique, an expression of strife.\n"
-       "In this artwork, the artist pours their heart,\n"
-       "A masterpiece of emotions, a true work of art.\n");
-return(0);
+	printf("with proper grammar, but the outcome is a piece of art,\n");
+	return (0);
 }
