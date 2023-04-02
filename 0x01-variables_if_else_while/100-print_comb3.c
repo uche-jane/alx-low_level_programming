@@ -1,4 +1,10 @@
 #include <stdio.h>
+/**
+ * main - Entry point
+ * Description: print all possible combination  of two-digits
+ * parameter: describe the parameter
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 {
