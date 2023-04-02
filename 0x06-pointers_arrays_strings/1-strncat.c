@@ -2,11 +2,12 @@
 #include <string.h>
 
 /**
- * char *_strncat - concatenate two strings
- * @char* dest
- * @char* src
+ * _strncat - concatenates n bytes from a string to another
+ * @dest:destination string
+ * @src:source string
+ * @n: number of bytes of str to concatenate
  *
- * Return: Always 0.
+ * Return: a pointer to the resulting string dest
  */
 
 char* _strncat(char* dest, char* src, int n) 
