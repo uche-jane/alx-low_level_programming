@@ -11,20 +11,18 @@
 
 int main(void)
 {
-    int i, a = 1, b = 2, c;
+ int i, a = 1, b = 2, c;
 
-    printf("%d, %d", a, b);
+ printf("%d, %d", a, b);
 
-    for (i = 3; i <= 98; i++)
-  {
-        c = a + b;
-        a = b;
-        b = c;
+ for (i = 3; i <= 98; i++)
+ {
+  c = a + b;
+  a = b;
+  b = c;
 
-    printf(", %d", c);
-  }
-
-    printf("\n");
-
-    return(0);
+  printf(", %d", c);
+ }
+  printf("\n");
+  return (0);
 }
