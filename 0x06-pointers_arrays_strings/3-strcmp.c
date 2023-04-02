@@ -2,12 +2,13 @@
 #include <string.h>
 
 /**
- *  _strcmp - compares two strings
+ *   _strcmp - compare string values
  *
- *  @char* s1
- *  char* 2
+ *  @s1: input value
+ *  @s2: input value
+ * 
  *
- * Return: Always 0.
+ * Return: s1[i] - s2[i]
  */
 
 int _strcmp(char* s1, char* s2) 
