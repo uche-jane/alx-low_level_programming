@@ -1,19 +1,20 @@
 #include <stdio.h>
+
 /**
- * main -Entry point
- *
- * Return :Always 0 (success)
+ * main - Entry point
+ * Description: the program's description
+ * parameter: describe the parameter
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-printf("size of a char: %d byte(s)\n", sizeof(char));
-printf("size of an int: %d byte(s)\n", sizeof(int));
-printf("size of long %d byte(s)\n",sizeof(long));
-printf("size of a long long %d byte(s)\n",sizeof(long long));
-printf("size of a float %d byte(s)\n",sizeof(float));
-printf("The size of double is %d bytes\n", sizeof(double));
-printf("The size of long double is %d bytes\n", sizeof(long double));
-return (0);
-}	
+	int intType;
+	char charType;
+	float floatType;
 
-
+	printf("size of a char: %zu byte(s)\n", sizeof(charType));
+	printf("size of an int: %zu byte(s)\n", sizeof(intType));
+	printf("size of a float: %zu byte(s)\n", sizeof(floatType));
+	return (0);
+}
