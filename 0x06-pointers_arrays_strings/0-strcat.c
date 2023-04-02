@@ -3,13 +3,13 @@
 /**
  * _strcat - concatenates two strings
  *
- * @char *dest
- * @char *src
+ * @dest: destination
+ * @src: source
  *
- * Return: Always 0.
+ * Return: The pointer to destination
  */
 
-char* _strcat(char* dest, char* src) 
+char* _strcat(char* dest, char* src)
 {
     strcat(dest, src);
     return dest;
