@@ -1,13 +1,16 @@
-#include <stdio.h>
+#include "main.h"
+
 /**
- * main - check the code
- *
- * Return: Always 0.
- */
+* add - a function that adds two integers
+* and returns the result.
+*
+* @a: number one.
+* @b: number two.
+*
+* Return: Add of number one and number two.
+*/
+
 int add(int a, int b)
 {
-    int result = a + b;
-    return result;
+	return (a + b);
 }
-
-

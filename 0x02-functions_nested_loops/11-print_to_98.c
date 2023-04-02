@@ -1,16 +1,30 @@
 #include <stdio.h>
 
-void print_to_98(int n) {
-    int i;
-    if (n <= 98) {
-        for (i = n; i < 98; i++) {
-            printf("%d, ", i);
-        }
-    } else {
-        for (i = n; i > 98; i--) {
-            printf("%d, ", i);
-        }
-    }
-    printf("98\n");  /* Print the last number followed by a newline character*/
+/**
+* print_to_98 - prints all natural numbers
+* from n to 98, followed by a new line
+*
+* @n: input number.
+*
+* Return: no return.
+*/
+
+void print_to_98(int n)
+{
+	if (n > 98)
+	{
+		for (; n > 98; n--)
+		{
+			printf("%d, ", n);
+		}
+	}
+	else if (n < 98)
+	{
+		for (; n < 98; n++)
+		{
+			printf("%d, ", n);
+		}
+	}
+	printf("%d\n", n);
 }
 
