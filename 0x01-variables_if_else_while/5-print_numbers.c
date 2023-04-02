@@ -1,12 +1,19 @@
 #include <stdio.h>
 
-int main() {
-    int i;
+/**
+ * main - Entry point
+ * Description: the program's description
+ * parameter: describe the parameter
+ * Return: Always 0 (Success)
+ */
 
-    for (i = 0; i < 10; i++) {
-        printf("%d", i);
-    }
-    printf("%s\n", "");
+int main(void)
+{
+	int i;
 
-    return 0;
-}
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d", i);
+	}
+	printf("\n");
+	return (0);
