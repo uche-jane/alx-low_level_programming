@@ -8,18 +8,21 @@
  * Return: Always 0 (success)
  */
 
-int main() 
+int main(void)
 {
-    int fib[50];
-    fib[0] = 1;
-    fib[1] = 2;
+    int a = 1, b = 2, temp;
+    int count = 0;
 
-    printf("%d, %d, ", fib[0], fib[1]);
+    printf("%d, %d", a, b);
+    count = 2;
 
-    for (int i = 2; i < 50; i++) 
+    while (count < 50)
     {
-        fib[i] = fib[i-1] + fib[i-2];
-        printf("%d, ", fib[i]);
+        temp = a + b;
+        printf(", %d", temp);
+        a = b;
+        b = temp;
+        count++;
     }
 
     printf("\n");

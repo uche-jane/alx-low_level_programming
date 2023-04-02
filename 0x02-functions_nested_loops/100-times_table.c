@@ -1,43 +1,57 @@
-#include <stdio.h>
-int main() {
+#include "main.h"
 
-  int n, i, range;
-  printf("Enter an integer: ");
-  scanf("%d", &n);
-
-  /* prompt user for positive range*/
-  do {
-    printf("Enter the range (positive integer): ");
-    scanf("%d", &range);
-  } while (range <= 0);
-
-  for (i = 1; i <= range; ++i) {
-    printf("%d * %d = %d \n", n, i, n * i);
-  }
-
-  return 0;
-}
+/**
+ * print_times_table - prints the n times table starting from 0
+ * @n: the multiplier for the times table
+ *
+ * Description: This function prints the times table for the
+ * given multiplier starting from 0.
+ *
+ *
+ * Return: void
+ */
+void print_times_table(int n)
+	{
+		int i, j, k;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		if (n >= 0 && n <= 15)
+		{
+			for (i = 0; i <= n; i++)
+			{
+				for (j = 0; j <= n; j++)
+				{
+					k = j * i;
+					if (j == 0)
+					{
+						_putchar(k + '0');
+					} else if (k < 10 && j != 0)
+					{
+						_putchar(',');
+						_putchar(' ');
+						_putchar(' ');
+						_putchar(' ');
+						_putchar(k + '0');
+					} else if (k >= 10 && k < 100)
+					{
+						_putchar(',');
+						_putchar(' ');
+						_putchar(' ');
+						_putchar((k / 10) + '0');
+						_putchar((k % 10) + '0');
+					} else if (k >= 100)
+					{
+						_putchar(',');
+						_putchar(' ');
+						_putchar((k / 100) + '0');
+						_putchar(((k / 10) % 10) + '0');
+						_putchar((k % 10) + '0');
+					}
+				}
+				_putchar('\n');
+			}
+		}
+	}
 
 
 
