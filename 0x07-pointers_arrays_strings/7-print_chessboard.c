@@ -7,16 +7,17 @@
  * Return: Always 0 (Success)
  */
 
-void print_chessboard(char (*a)[8]) 
+void print_chessboard(char (*a)[8])
 {
-    int i, j;
+	int i, j;
 
-    /* Iterate over the rows of the chessboard*/
-    for (i = 0; i < 8; i++) {
-        /* Iterate over the columns of the chessboard*/
-        for (j = 0; j < 8; j++) {
-            printf("%c ", a[i][j]);
-        }
-        printf("\n");
-    }
+	for (i = 0; i < 8; i++)
+	{
+		for (j = 0; j < 8; j++)
+		{
+			_putchar(a[i][j]);
+		}
+
+	_putchar('\n');
+	}
 }
