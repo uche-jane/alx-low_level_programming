@@ -11,17 +11,19 @@
 #define ELF_HEADER_SIZE 64
 
 /**
- * Displays an error message and exits with status code 98.
- *
- * @param message The error message to display.
+ * display_error - Display error message and exit.
+ * @message: The error message to display.
  */
-
 void display_error(const char *message)
 {
 	fprintf(stderr, "Error: %s\n", message);
 	exit(98);
 }
 
+/**
+ * display_elf_header - Display information from the ELF header of a file.
+ * @filename: The name of the file to process.
+ */
 void display_elf_header(const char *filename)
 {
 	int fd = open(filename, O_RDONLY);
@@ -30,7 +32,7 @@ void display_elf_header(const char *filename)
 		display_error("Failed to open the file");
 	}
 
-	/*Read the ELF header*/
+	/* Read the ELF header */
 	char elf_header[ELF_HEADER_SIZE];
 	ssize_t bytes_read = read(fd, elf_header, ELF_HEADER_SIZE);
 	if (bytes_read == -1)
@@ -46,9 +48,10 @@ void display_elf_header(const char *filename)
 		display_error("Not an ELF file");
 	}
 
-	/* Display the information*/
+	/* Display the information */
+	int i;
 	printf("Magic: ");
-	for (int i = 0; i < ELF_MAGIC_SIZE; i++)
+	for (i = 0; i < ELF_MAGIC_SIZE; i++)
 	{
 		printf("%02x ", (uint8_t)elf_header[i]);
 	}
@@ -71,6 +74,12 @@ void display_elf_header(const char *filename)
 	close(fd);
 }
 
+/**
+ * main - Entry point of the program.
+ * @argc: The number of command-line arguments.
+ * @argv: An array of command-line argument strings.
+ * Return: 0 on success, 98 on error.
+ */
 int main(int argc, char *argv[])
 {
 	if (argc != 2)
@@ -80,5 +89,6 @@ int main(int argc, char *argv[])
 
 	display_elf_header(argv[1]);
 
-	return (0);
+	return 0;
 }
+
