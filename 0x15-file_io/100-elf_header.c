@@ -10,11 +10,16 @@
 #define ELF_MAGIC_SIZE 4
 #define ELF_HEADER_SIZE 64
 
-void display_error(const char *message) 
+/**
+ * Displays an error message and exits with status code 98.
+ *
+ * @param message The error message to display.
+ */
+
+void display_error(const char *message)
 {
-    fprintf(stderr, "Error: %s\n", message);
-    fprintf(stderr, "Usage: elf_header elf_filename\n");
-    exit(98);
+	fprintf(stderr, "Error: %s\n", message);
+	exit(98);
 }
 
 void display_elf_header(const char *filename)
@@ -25,7 +30,7 @@ void display_elf_header(const char *filename)
 		display_error("Failed to open the file");
 	}
 
-	// Read the ELF header
+	/*Read the ELF header*/
 	char elf_header[ELF_HEADER_SIZE];
 	ssize_t bytes_read = read(fd, elf_header, ELF_HEADER_SIZE);
 	if (bytes_read == -1)
@@ -34,14 +39,14 @@ void display_elf_header(const char *filename)
 		display_error("Failed to read the ELF header");
 	}
 
-	// Check if it's a valid ELF file
+	/* Check if it's a valid ELF file */
 	if (memcmp(elf_header, "\x7F" "ELF", ELF_MAGIC_SIZE) != 0)
 	{
 		close(fd);
 		display_error("Not an ELF file");
 	}
 
-	// Display the information
+	/* Display the information*/
 	printf("Magic: ");
 	for (int i = 0; i < ELF_MAGIC_SIZE; i++)
 	{
@@ -75,6 +80,5 @@ int main(int argc, char *argv[])
 
 	display_elf_header(argv[1]);
 
-	return(0);
+	return (0);
 }
-
