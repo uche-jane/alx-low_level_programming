@@ -3,10 +3,10 @@
 #include <stdio.h>
 
 /**
- * leave - prints error messages
- * @err: number is either
- * @filename: str is a name representing either both file names
- * @fd: file identifier
+ * leave - Print error messages
+ * @err: Number representing the error
+ * @filename: String representing the file name
+ * @fd: File identifier
  * Return: 0 on success
  **/
 int leave(int err, char *filename, int fd)
