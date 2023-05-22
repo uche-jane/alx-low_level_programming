@@ -10,10 +10,11 @@
 #define ELF_MAGIC_SIZE 4
 #define ELF_HEADER_SIZE 64
 
-void display_error(const char *message)
+void display_error(const char *message) 
 {
-	fprintf(stderr, "Error: %s\n", message);
-	exit(98);
+    fprintf(stderr, "Error: %s\n", message);
+    fprintf(stderr, "Usage: elf_header elf_filename\n");
+    exit(98);
 }
 
 void display_elf_header(const char *filename)
