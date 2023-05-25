@@ -1,10 +1,8 @@
 #include "main.h"
 
 /**
- * print_binary - Prints the binary representation of a number
- * @n: The number to be printed in binary format
- *
- * Return: Nothing
+ * print_binary - Prints the binary equivalent of a decimal number.
+ * @n: The number to be printed in binary.
  */
 void print_binary(unsigned long int n)
 {
@@ -26,4 +24,3 @@ void print_binary(unsigned long int n)
 	if (!count)
 		_putchar('0');
 }
-
